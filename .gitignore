@@ -1,4 +1,8 @@
-.DS_Store
-/.build
-/Packages
-/*.xcodeproj
+.build
+build
+.vagrant
+Packages
+*.pkg
+Kitura.xcodeproj
+*.DS_Store
+Package.resolved
