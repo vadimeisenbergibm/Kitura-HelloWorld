@@ -29,7 +29,7 @@ let router = RouterCreator.create()
 Log.logger = HeliumLogger()
 
 // Use port 8090 unless overridden by environment variable
-let port = Int(ProcessInfo.processInfo.environment["PORT"] ?? "8090") ?? 8090
+let port = Int(ProcessInfo.processInfo.environment["PORT"] ?? "8080") ?? 8080
 
 // Add HTTP Server to listen on the port
 Kitura.addHTTPServer(onPort: port, with: router)
