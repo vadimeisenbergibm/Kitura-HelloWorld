@@ -15,7 +15,7 @@
  **/
 
 import XCTest
-import KituraHelloWorldRouterTests
+@testable import KituraHelloWorldRouterTests
 
 XCTMain([
            testCase(KituraHelloWorldTests.allTests)
