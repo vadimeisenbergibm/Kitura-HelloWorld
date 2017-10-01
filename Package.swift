@@ -19,9 +19,9 @@ import PackageDescription
 let package = Package(
         name: "KituraHelloWorld",
         targets: [
-            Target(name: "KituraHelloWorldMain",
-                   dependencies: [.Target(name: "KituraHelloWorld")]),
-            Target(name: "KituraHelloWorld")],
+            Target(name: "KituraHelloWorld",
+                   dependencies: [.Target(name: "KituraHelloWorldRouter")]),
+            Target(name: "KituraHelloWorldRouter")],
     dependencies: [
         .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 1, minor: 7),
         .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 1, minor: 7)
