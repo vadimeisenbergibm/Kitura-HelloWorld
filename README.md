@@ -2,6 +2,7 @@
 ![macOS](https://img.shields.io/badge/os-macOS-green.svg?style=flat)
 ![Linux](https://img.shields.io/badge/os-linux-green.svg?style=flat)
 ![Apache 2](https://img.shields.io/badge/license-Apache2-blue.svg?style=flat)
+[![codecov](https://codecov.io/gh/vadimeisenbergibm/Kitura-HelloWorld/branch/master/graph/badge.svg)](https://codecov.io/gh/vadimeisenbergibm/Kitura-HelloWorld)
 [![codebeat badge](https://codebeat.co/badges/5d31f50c-b95f-4fc7-9088-bd6c667ae90b)](https://codebeat.co/projects/github-com-vadimeisenbergibm-kitura-helloworld-master)
 
 # Kitura-HelloWorld
