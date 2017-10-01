@@ -17,7 +17,7 @@
 import Foundation
 
 import Kitura
-import KituraHelloWorld
+import KituraHelloWorldRouter
 
 import LoggerAPI
 import HeliumLogger
