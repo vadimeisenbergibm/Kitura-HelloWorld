@@ -23,7 +23,7 @@ public struct RouterCreator {
         let router = Router()
         router.get("/") {
             request, response, next in
-            response.send("Hello, World! The time is \(Date())")
+            response.send("Hello, World!")
             next()
         }
         return router
