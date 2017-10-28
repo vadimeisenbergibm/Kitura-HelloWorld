@@ -1,5 +1,8 @@
+// swift-tools-version:4.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
 /**
- * Copyright IBM Corporation 2016
+ * Copyright IBM Corporation 2016, 2017
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,13 +20,30 @@
 import PackageDescription
 
 let package = Package(
-        name: "KituraHelloWorld",
-        targets: [
-            Target(name: "KituraHelloWorld",
-                   dependencies: [.Target(name: "KituraHelloWorldRouter")]),
-            Target(name: "KituraHelloWorldRouter")],
+    name: "Kitura-HelloWorld",
+    products: [
+        .library(
+            name: "Kitura-HelloWorld",
+            targets: ["KituraHelloWorld"]
+        )
+    ],
     dependencies: [
-        .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 1, minor: 7),
-        .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 1, minor: 7)
+      .package(url: "https://github.com/IBM-Swift/Kitura.git", .upToNextMajor(from: "1.7.0")),
+      .package(url: "https://github.com/IBM-Swift/LoggerAPI.git", .upToNextMajor(from: "1.7.0")),
+      .package(url: "https://github.com/IBM-Swift/HeliumLogger.git", .upToNextMajor(from: "1.7.0")),
+    ],
+    targets: [
+      .target(
+            name: "KituraHelloWorld",
+            dependencies: ["KituraHelloWorldRouter", "HeliumLogger", "LoggerAPI"]
+        ),
+        .target(
+            name: "KituraHelloWorldRouter",
+            dependencies: ["Kitura"]
+        ),
+        .testTarget(
+            name: "KituraHelloWorldRouterTests",
+            dependencies: ["KituraHelloWorldRouter", "HeliumLogger"]
+        )
     ]
 )
