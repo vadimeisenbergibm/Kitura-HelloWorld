@@ -22,7 +22,7 @@ import PackageDescription
 let package = Package(
     name: "Kitura-HelloWorld",
     products: [
-        .library(
+        .executable(
             name: "Kitura-HelloWorld",
             targets: ["KituraHelloWorld"]
         )
