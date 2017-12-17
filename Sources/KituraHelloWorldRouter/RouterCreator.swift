@@ -16,14 +16,19 @@
  **/
 
 import Kitura
+import LoggerAPI
 
 public struct RouterCreator {
      public static func create() -> Router {
         let router = Router()
-        router.get("/") { _, response, _ in  
-            response.send("Hello, World!").end()
+        router.get("/") { _, response, _ in
+            do {
+               try response.send("Hello, World!").end()
+            } catch {
+               Log.error("Caught an error while sending a response: \(error)")
+            }
         }
-        
+
         return router
      }
 }
