@@ -28,7 +28,7 @@ let router = RouterCreator.create()
 // Using an implementation for a Logger
 Log.logger = HeliumLogger()
 
-// Use port 8090 unless overridden by environment variable
+// Use port 8080 unless overridden by environment variable
 let port = Int(ProcessInfo.processInfo.environment["PORT"] ?? "8080") ?? 8080
 
 // Add HTTP Server to listen on the port
