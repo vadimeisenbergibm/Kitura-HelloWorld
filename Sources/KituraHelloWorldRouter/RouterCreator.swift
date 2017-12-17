@@ -21,9 +21,9 @@ public struct RouterCreator {
      public static func create() -> Router {
         let router = Router()
         router.get("/") { request, response, next in  
-            response.send("Hello, World!")
-            next()
+            response.send("Hello, World!").end()
         }
+        
         return router
      }
 }
