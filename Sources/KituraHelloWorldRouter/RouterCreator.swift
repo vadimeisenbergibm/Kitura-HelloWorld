@@ -20,7 +20,7 @@ import Kitura
 public struct RouterCreator {
      public static func create() -> Router {
         let router = Router()
-        router.get("/") { request, response, next in  
+        router.get("/") { _, response, _ in  
             response.send("Hello, World!").end()
         }
         
